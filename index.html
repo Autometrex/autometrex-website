@@ -239,12 +239,30 @@
     <div class="cf-box reveal d2">
       <div class="cf-title">Book an Executive Demo</div>
       <div class="cf-sub">Get a personalised walkthrough tailored to your specific operational challenges.</div>
-      <div class="form">
-        <div class="f-row"><input class="finput" type="text" placeholder="Your Name"><input class="finput" type="text" placeholder="Company"></div>
-        <div class="f-row"><input class="finput" type="email" placeholder="Work Email"><input class="finput" type="text" placeholder="Role / Title"></div>
-        <textarea class="fta" placeholder="Describe your operational challenges and what you'd like to automate..."></textarea>
-        <button class="fsub" onclick="handleSubmit(event)">Book an Executive Demo →</button>
-      </div>
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      
+        <input type="hidden" name="access_key" value="c1202943-8687-46e5-bf0a-fddd91e8e35b">
+      
+        <div class="f-row">
+          <input class="finput" type="text" name="name" placeholder="Your Name" required>
+      
+          <input class="finput" type="text" name="company" placeholder="Company">
+        </div>
+      
+        <div class="f-row">
+          <input class="finput" type="email" name="email" placeholder="Work Email" required>
+      
+          <input class="finput" type="text" name="role" placeholder="Role / Title">
+        </div>
+      
+        <textarea class="fta" name="message"
+          placeholder="Describe your operational challenges and what you'd like to automate..."></textarea>
+      
+        <button class="fsub" type="submit">
+          Book an Executive Demo →
+        </button>
+      
+      </form>
       <p class="f-mail">Or email us at <a href="mailto:contact@autometrex.com">Contact@autometrex.com</a></p>
     </div>
   </div>
